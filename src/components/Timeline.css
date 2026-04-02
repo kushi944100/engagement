@@ -1,0 +1,121 @@
+/* ===== TIMELINE SECTION ===== */
+
+.timeline-section {
+  padding: 100px 24px;
+}
+
+.timeline-header {
+  margin-bottom: 60px;
+}
+
+.timeline-container {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+/* Central line */
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, transparent, var(--gold), var(--gold), transparent);
+  transform: translateX(-50%);
+}
+
+/* Timeline item */
+.timeline-item {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 48px;
+  width: 50%;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-item-left {
+  padding-right: 50px;
+  text-align: right;
+  justify-content: flex-end;
+}
+
+.timeline-item-right {
+  padding-left: 50px;
+  margin-left: 50%;
+  text-align: left;
+}
+
+/* Dot */
+.timeline-dot {
+  position: absolute;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--cream-light);
+  border: 2px solid var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.2);
+}
+
+.timeline-item-left .timeline-dot {
+  right: -26px;
+}
+
+.timeline-item-right .timeline-dot {
+  left: -26px;
+}
+
+.timeline-dot-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Content */
+.timeline-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.timeline-time {
+  color: var(--gold-dark);
+}
+
+.timeline-title {
+  color: var(--maroon);
+}
+
+.timeline-desc {
+  color: var(--dark-soft);
+}
+
+/* Responsive - switch to single column */
+@media (max-width: 768px) {
+  .timeline-line {
+    left: 26px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 70px !important;
+    padding-right: 0 !important;
+    text-align: left !important;
+    justify-content: flex-start !important;
+    margin-left: 0 !important;
+  }
+
+  .timeline-dot {
+    left: 0 !important;
+    right: auto !important;
+  }
+}

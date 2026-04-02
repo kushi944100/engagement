@@ -1,0 +1,227 @@
+/* ===== HERO SECTION ===== */
+
+.hero-section {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: linear-gradient(
+    180deg,
+    var(--blush-light) 0%,
+    var(--cream) 40%,
+    var(--cream-light) 100%
+  );
+  overflow: hidden;
+  padding: 40px 20px;
+}
+
+/* Mandala bg */
+.hero-mandala-center {
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.06;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Floral corners */
+.hero-floral {
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  object-fit: contain;
+  pointer-events: none;
+  z-index: 1;
+  mix-blend-mode: multiply;
+  opacity: 0.9;
+}
+
+.hero-floral-top-left {
+  top: -10px;
+  left: -10px;
+}
+
+.hero-floral-top-right {
+  top: -10px;
+  right: -10px;
+  transform: scaleX(-1);
+}
+
+.hero-floral-bottom-left {
+  bottom: -10px;
+  left: -10px;
+  transform: scaleY(-1);
+}
+
+.hero-floral-bottom-right {
+  bottom: -10px;
+  right: -10px;
+  transform: scale(-1, -1);
+}
+
+/* Arch */
+.hero-arch {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 500px;
+  z-index: 1;
+}
+
+.arch-svg {
+  width: 100%;
+}
+
+/* Content */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+}
+
+/* Ganesh */
+.ganesh-container {
+  width: 160px;
+  height: 160px;
+  margin-bottom: 8px;
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--gold);
+  box-shadow: 0 4px 30px rgba(212, 175, 55, 0.2);
+  background: var(--cream);
+}
+
+.ganesh-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  mix-blend-mode: multiply;
+}
+
+.ganesh-svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Text */
+.hero-blessing {
+  margin-top: 8px;
+  font-size: clamp(0.7rem, 1.2vw, 0.9rem);
+  color: var(--gold-dark);
+}
+
+.hero-subtext {
+  max-width: 500px;
+  margin: 8px 0;
+  font-size: clamp(0.85rem, 1.5vw, 1.05rem);
+  line-height: 1.8;
+}
+
+/* Names */
+.hero-names {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin: 8px 0;
+}
+
+.hero-name {
+  text-shadow: 2px 2px 4px rgba(128, 0, 0, 0.1);
+}
+
+.hero-ampersand {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  color: var(--gold);
+  font-style: italic;
+}
+
+.hero-tagline {
+  font-style: italic;
+  color: var(--rose);
+  margin-top: 4px;
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  z-index: 2;
+}
+
+.scroll-text {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--gold-dark);
+  opacity: 0.7;
+}
+
+/* Particles */
+.hero-particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.particle {
+  position: absolute;
+  color: var(--gold);
+  font-size: 12px;
+  opacity: 0.4;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero-floral {
+    width: 140px;
+    height: 140px;
+  }
+
+  .ganesh-container {
+    width: 110px;
+    height: 110px;
+  }
+
+  .hero-names {
+    gap: 10px;
+  }
+
+  .scroll-indicator {
+    bottom: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-floral {
+    width: 100px;
+    height: 100px;
+  }
+
+  .ganesh-container {
+    width: 90px;
+    height: 90px;
+  }
+}

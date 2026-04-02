@@ -1,0 +1,128 @@
+/* ===== CLOSING SECTION ===== */
+
+.closing-section {
+  padding: 100px 24px 60px;
+  position: relative;
+  overflow: hidden;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    180deg,
+    var(--cream-light) 0%,
+    var(--cream) 40%,
+    var(--blush-light) 100%
+  );
+}
+
+.closing-floral {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  object-fit: contain;
+  pointer-events: none;
+  opacity: 0.6;
+  mix-blend-mode: multiply;
+}
+
+.closing-floral-left {
+  bottom: -20px;
+  left: -30px;
+  transform: scaleY(-1);
+}
+
+.closing-floral-right {
+  bottom: -20px;
+  right: -30px;
+  transform: scale(-1, -1);
+}
+
+.closing-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+  z-index: 2;
+}
+
+.closing-symbol {
+  margin-bottom: 8px;
+}
+
+.closing-heading {
+  color: var(--maroon);
+}
+
+.closing-message {
+  max-width: 500px;
+  text-align: center;
+  line-height: 2;
+}
+
+.closing-quote {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: clamp(0.85rem, 1.4vw, 1rem);
+  color: var(--rose);
+  max-width: 400px;
+  line-height: 1.8;
+  margin: 12px 0;
+  opacity: 0.9;
+}
+
+.closing-names {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.closing-amp {
+  font-family: var(--font-heading);
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  color: var(--gold);
+  font-style: italic;
+}
+
+/* Footer */
+.closing-footer {
+  margin-top: 60px;
+  position: relative;
+  z-index: 2;
+}
+
+.closing-footer-text {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: var(--dark-soft);
+  opacity: 0.6;
+  letter-spacing: 0.05em;
+}
+
+/* Sparkles */
+.closing-sparkles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.sparkle {
+  position: absolute;
+  color: var(--gold);
+  font-size: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .closing-floral {
+    width: 150px;
+    height: 150px;
+    opacity: 0.35;
+  }
+}

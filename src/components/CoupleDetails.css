@@ -1,0 +1,112 @@
+/* ===== COUPLE DETAILS SECTION ===== */
+
+.couple-section {
+  padding: 100px 24px;
+}
+
+.couple-header {
+  margin-bottom: 60px;
+}
+
+.couple-grid {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 40px;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Person Card */
+.person-card {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: 24px;
+  padding: 48px 32px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s var(--ease-elegant);
+}
+
+.person-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.person-card:hover {
+  transform: translateY(-4px);
+}
+
+.person-ornament {
+  margin-bottom: 16px;
+}
+
+.person-ornament-svg {
+  width: 80px;
+  height: 16px;
+}
+
+.person-label {
+  margin-bottom: 8px;
+  font-size: 0.7rem !important;
+}
+
+.person-name {
+  margin-bottom: 16px;
+  color: var(--maroon);
+}
+
+.person-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.person-family {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.family-label {
+  font-weight: 500;
+  color: var(--gold-dark);
+}
+
+/* Center ornament */
+.couple-center-ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.couple-ring-icon {
+  animation: pulse-glow 3s ease-in-out infinite;
+  border-radius: 50%;
+  padding: 12px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .couple-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .couple-center-ornament {
+    order: -1;
+  }
+
+  .person-card {
+    padding: 36px 24px;
+  }
+}
